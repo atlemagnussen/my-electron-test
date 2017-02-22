@@ -2,7 +2,7 @@
   "name": "electron-test",
   "version": "1.0.0",
   "description": "electron test project",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
@@ -17,6 +17,6 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/atlemagnussen/electron-test#readme",
   "devDependencies": {
-    "electron-prebuilt": "^1.4.13"
+    "electron": "^1.4.15"
   }
 }
