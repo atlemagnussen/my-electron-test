@@ -1,0 +1,22 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "electron test project",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/atlemagnussen/electron-test.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "Atle Magnussen",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/atlemagnussen/electron-test#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  }
+}
