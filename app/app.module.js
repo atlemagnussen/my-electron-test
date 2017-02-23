@@ -1,5 +1,4 @@
-angular.module('myApp', [
-  'ngRoute'
-  'homeModule',
-  'aboutModule'
-]);
+(function(angular) {
+    'use strict';
+    angular.module('app', ['ngRoute', 'homeModule', 'aboutModule']);
+})(window.angular);

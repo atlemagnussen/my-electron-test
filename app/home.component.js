@@ -1,3 +1,4 @@
+(function(angular) {
 angular.module('homeModule').component('homeView', {
     template: '<p>home view</p>',
     controller: ['$routeParams', function HomeViewController($routeParams) {
@@ -7,3 +8,4 @@ angular.module('homeModule').component('homeView', {
         }
     ]
 });
+})(window.angular);

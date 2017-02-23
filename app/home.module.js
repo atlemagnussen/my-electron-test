@@ -1,3 +1,7 @@
-angular.module('homeModule', [
-  'ngRoute'
-]);
+(function(angular) {
+
+    angular.module('homeModule', [
+      'ngRoute'
+    ]);
+
+})(window.angular);
