@@ -1,6 +1,6 @@
 
 angular.module('aboutModule').component('aboutView', {
-    template: '<p>{{hello}}</p><p><a href="{{url}}">Electron</a></p>',
+    templateUrl: 'components/about/about.html',
     controller: ['$routeParams', function AboutViewController($routeParams) {
             this.hello = "Hello Electron";
             this.url = "http://electron.atom.io";

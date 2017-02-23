@@ -1,9 +1,9 @@
 (function(angular) {
 angular.module('homeModule').component('homeView', {
-    template: '<p>home view</p>',
+    templateUrl: 'components/home/home.html',
     controller: ['$routeParams', function HomeViewController($routeParams) {
             this.hello = "Hello Angular";
-            this.url = "https://angularjs.org";
+            this.url = "https://docs.angularjs.org/guide/component";
             // $routeParams.phoneId;
         }
     ]
