@@ -9,4 +9,5 @@ div.menu {
     background: #f4f6f9;
     width: 180px;
     padding: 10px;
+    background: rgba(0, 0, 0, 0.75);
 }

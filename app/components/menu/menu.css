@@ -1,6 +1,7 @@
 ul.menu-list{
     margin: 0;
     padding: 0;
+    background-color: inhert;
 }
 
 ul.menu-list>li a {
@@ -8,14 +9,15 @@ ul.menu-list>li a {
     display: block;
     padding: 8px 16px;
     text-decoration: none;
+    color: white;
 }
 
 ul.menu-list>li a:hover {
-    background-color: #555;
+    background-color: #888;
     color: white;
 }
 
 ul.menu-list>li.active {
-    background-color: #4CAF50;
+    background-color: #458fa1;
     color: white;
 }
