@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="my-app">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello Electron!</title>
+        <script src="angular.js"></script>
+        <script src="angular-route.js"></script>
+        <script src="app.module.js"></script>
+        <script src="app.config.js"></script>
+        <script src="home.module.js"></script>
+        <script src="home.component.js"></script>
+        <script src="about.module.js"></script>
+        <script src="about.component.js"></script>
+    </head>
+    <body>
+        <h1>Hello angular</h1>
+        <a href="#!/home">Home</a>
+        <a href="#!/about">About</a>
+
+        <div ng-view></div>
+    </body>
+</html>

@@ -1,22 +1,26 @@
 {
-  "name": "electron-test",
-  "version": "1.0.0",
-  "description": "electron test project",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/atlemagnussen/electron-test.git"
-  },
-  "keywords": [
-    "electron"
-  ],
-  "author": "Atle Magnussen",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/atlemagnussen/electron-test#readme",
-  "devDependencies": {
-    "electron": "^1.4.15"
-  }
+    "name": "electron-test",
+    "version": "1.0.0",
+    "description": "electron test project",
+    "main": "main.js",
+    "scripts": {
+        "build": "webpack --progress --profile --colors --display-error-details --display-cached",
+        "start": "electron ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@bitbucket.org/atlemagnussen/electron-test.git"
+    },
+    "keywords": [
+        "electron angular2"
+    ],
+    "author": "Atle Magnussen",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/atlemagnussen/electron-test#readme",
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "electron": "^1.4.15"
+    }
 }
