@@ -1,2 +1,9 @@
-<p>{{hello}}</p>
-<p><a href="{{$ctrl.url}}">{{$ctrl.url}}</a></p>
+<button ng-repeat="item in $ctrl.items" ng-click="$ctrl.setSelection(item)">{{item}}</button>
+<hr/>
+<div class="animate-switch-container" ng-switch on="$ctrl.selection">
+    <div class="animate-switch" ng-switch-when="settings|options" ng-switch-when-separator="|">
+        <h1>Headline<h1>
+    </div>
+    <div class="animate-switch" ng-switch-when="home">Home Span</div>
+    <div class="animate-switch" ng-switch-default>default</div>
+</div>

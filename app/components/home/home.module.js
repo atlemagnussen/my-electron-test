@@ -1,7 +1,5 @@
 (function(angular) {
 
-    angular.module('homeModule', [
-      'ngRoute'
-    ]);
+    angular.module('homeModule', ['ngRoute', 'ngAnimate']);
 
 })(window.angular);
