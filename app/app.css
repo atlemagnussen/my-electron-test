@@ -1,0 +1,12 @@
+div.content {
+    margin-left: 200px;
+}
+div.menu {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #f4f6f9;
+    width: 180px;
+    padding: 10px;
+}
