@@ -4,7 +4,6 @@
     "description": "electron test project",
     "main": "main.js",
     "scripts": {
-        "build": "webpack --progress --profile --colors --display-error-details --display-cached",
         "start": "electron ."
     },
     "repository": {
@@ -12,7 +11,7 @@
         "url": "git+ssh://git@bitbucket.org/atlemagnussen/electron-test.git"
     },
     "keywords": [
-        "electron angular2"
+        "electron angular"
     ],
     "author": "Atle Magnussen",
     "license": "ISC",

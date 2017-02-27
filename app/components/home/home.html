@@ -1,9 +1,59 @@
-<button ng-repeat="item in $ctrl.items" ng-click="$ctrl.setSelection(item)">{{item}}</button>
+<button ng-click="$ctrl.previous()">previous</button>
+<button ng-click="$ctrl.next()">next</button>
 <hr/>
 <div class="animate-switch-container" ng-switch on="$ctrl.selection">
-    <div class="animate-switch" ng-switch-when="settings|options" ng-switch-when-separator="|">
-        <h1>Headline<h1>
+    <div class="animate-switch" ng-switch-when="0">
+        <img src="assets/electron2.svg">
     </div>
-    <div class="animate-switch" ng-switch-when="home">Home Span</div>
+    <div class="animate-switch" ng-switch-when="1">
+        <img src="assets/components.png" width="100%">
+    </div>
+    <div class="animate-switch" ng-switch-when="2">
+        <i>main.js</i>
+        <p><code>
+            const electron = require('electron')<br/>
+            const app = electron.app<br/>
+            const BrowserWindow = electron.BrowserWindow<br/>
+            <br/>
+            const path = require('path')<br/>
+            const url = require('url')<br/>
+            <br/>
+            // Keep a global reference of the window object, if you don't, the window will be closed automatically when the JavaScript object is garbage collected.<br/>
+            let mainWindow<br/>
+            <br/>
+            function createWindow () {<br/>
+              mainWindow = new BrowserWindow({width: 800, height: 600})<br/>
+              // mainWindow.setMenu(null);<br/>
+              mainWindow.loadURL(url.format({<br/>
+                pathname: path.join(__dirname, 'app/index.html'),<br/>
+                protocol: 'file:',<br/>
+                slashes: true<br/>
+              }))<br/>
+            <br/>
+              // mainWindow.webContents.openDevTools()<br/>
+            <br/>
+              // Emitted when the window is closed.<br/>
+              mainWindow.on('closed', function () {<br/>
+                // Dereference the window object, usually you would store windows<br/>
+                // in an array if your app supports multi windows, this is the time<br/>
+                // when you should delete the corresponding element.<br/>
+                mainWindow = null<br/>
+              })<br/>
+            }<br/>
+            <br/>
+            app.on('ready', createWindow)<br/>
+<br/>
+        </code></p>
+    </div>
+    <div class="animate-switch" ng-switch-when="3">
+        <p><i>in index.html</i></p>
+        <p><code>
+                var fs = require('fs');<br/>
+                var content = fs.readFileSync('./package.json');<br/>
+        </code></p>
+    </div>
+    <div class="animate-switch" ng-switch-when="4">
+        <p>4</p>
+    </div>
     <div class="animate-switch" ng-switch-default>default</div>
 </div>
