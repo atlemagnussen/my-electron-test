@@ -24,7 +24,7 @@ angular.module('homeModule').component('homeView', {
             this.setSelection = function(item) {
                 this.selection = item;
             }
-            // $routeParams.phoneId;
+            // $routeParams.something
         }
     ]
 });
