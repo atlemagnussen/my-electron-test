@@ -1,65 +1,41 @@
-<button ng-click="$ctrl.previous()">previous</button>
-<button ng-click="$ctrl.next()">next</button>
+<!-- <a ng-click="$ctrl.previous()">previous</a>
+<a ng-click="$ctrl.next()">next</a> -->
 <hr/>
-<div class="animate-switch-container" ng-switch on="$ctrl.selection">
+<div class="animate-switch-container" ng-switch on="$ctrl.selection" ng-mousedown="$ctrl.next()">
     <div class="animate-switch" ng-switch-when="0">
         <p><img src="assets/electron2.svg"></p>
         <h2>by Github</h2>
-        <h4>Some apps</h4>
+        <h4>Cross platform apps with Javascript, HTML and CSS</h4>
         <p><img src="https://electron.atom.io/images/apps/atom-icon-64.png"> Atom</p>
         <p><img src="https://electron.atom.io/images/apps/visual-studio-code-icon-64.png"> Visual Studio Code</p>
         <p><img src="https://electron.atom.io/images/apps/gitkraken-icon-64.png"> Gitkraken</p>
         <p><img src="https://electron.atom.io/images/apps/postman-icon-64.png"> Postman</p>
     </div>
     <div class="animate-switch" ng-switch-when="1">
+        <h2>the simple explanation</h2>
         <img src="assets/components.png" width="100%">
     </div>
     <div class="animate-switch" ng-switch-when="2">
-        <i>main.js</i>
-        <p><code>
-            const electron = require('electron')<br/>
-            const app = electron.app<br/>
-            const BrowserWindow = electron.BrowserWindow<br/>
-            <br/>
-            const path = require('path')<br/>
-            const url = require('url')<br/>
-            <br/>
-            // Keep a global reference of the window object, if you don't, the window will be closed automatically when the JavaScript object is garbage collected.<br/>
-            let mainWindow<br/>
-            <br/>
-            function createWindow () {<br/>
-              mainWindow = new BrowserWindow({width: 800, height: 600})<br/>
-              // mainWindow.setMenu(null);<br/>
-              mainWindow.loadURL(url.format({<br/>
-                pathname: path.join(__dirname, 'app/index.html'),<br/>
-                protocol: 'file:',<br/>
-                slashes: true<br/>
-              }))<br/>
-            <br/>
-              // mainWindow.webContents.openDevTools()<br/>
-            <br/>
-              // Emitted when the window is closed.<br/>
-              mainWindow.on('closed', function () {<br/>
-                // Dereference the window object, usually you would store windows<br/>
-                // in an array if your app supports multi windows, this is the time<br/>
-                // when you should delete the corresponding element.<br/>
-                mainWindow = null<br/>
-              })<br/>
-            }<br/>
-            <br/>
-            app.on('ready', createWindow)<br/>
-<br/>
-        </code></p>
+        <h2>package.json</h2>
+        <pre nag-prism source="{{$ctrl.packagejson}}" class="language-json"></pre>
     </div>
     <div class="animate-switch" ng-switch-when="3">
-        <p><i>in index.html</i></p>
-        <p><code>
-                var fs = require('fs');<br/>
-                var content = fs.readFileSync('./package.json');<br/>
-        </code></p>
+        <h2>main.js</h2>
+        <pre nag-prism source="{{$ctrl.mainjs}}" class="language-js"></pre>
     </div>
     <div class="animate-switch" ng-switch-when="4">
-        <p>4</p>
+        <h2>Node.js APIs available everywhere</h2>
+        <pre nag-prism source="const fs = require('fs')
+const path = require('path')
+let mainJsPath = path.join(__dirname, '../main.js')
+var mainJsContent = fs.readFileSync(mainJsPath);
+let packageJsonPath = path.join(__dirname, '../package.json')
+var packageJsonContent = fs.readFileSync(packageJsonPath);" class="language-js"></pre>
+    </div>
+    <div class="animate-switch" ng-switch-when="5">
+        <h2>Build</h2>
+        <pre nag-prism source="electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds
+                    --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Test\"" class="language-batch"></pre>
     </div>
     <div class="animate-switch" ng-switch-default>default</div>
 </div>
