@@ -15,3 +15,5 @@ angular js with navigation and popout windows
 	`npm install electron-packager -g`  
 - then `electron-packager .` to just discover platform and architecture and use name/version from package.json  
   or run `build-win.bat` which is an example of using some of the build options
+
+![electron test](https://storage.googleapis.com/atle-static/electron-test.jpg)
